@@ -26,4 +26,10 @@ def salt(weight):
     return int(15 * weight / 1000)
 
 
+def spices(weight):
+    try:
+        weight = int(weight)
+    except ValueError:
+        return 0
+    return float(0.5 * weight / 1000)
 
