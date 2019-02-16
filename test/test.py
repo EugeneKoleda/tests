@@ -54,5 +54,21 @@ class TestSpices(unittest.TestCase):
         self.assertEqual(spices('adadda'), 0)
 
 
+class TestMonosaccharides(unittest.TestCase):
+    def test_monosaccharides_returns_weight(self):
+        self.assertEqual(monosaccharides(1000), 5)
+        self.assertEqual(monosaccharides(1500), 7)
+        self.assertEqual(monosaccharides(800), 4)
+
+    def test_monosaccharides_returns_integer(self):
+        self.assertIsInstance(monosaccharides(1000), int)
+
+    def test_monosaccharides_receives_string_return_integer(self):
+        self.assertEqual(monosaccharides('1000'), 5)
+
+    def test_monosaccharides_receives_alpha_string_return_integer(self):
+        self.assertEqual(monosaccharides('adadda'), 0)
+
+
 if __name__ == "__main__":
     unittest.main()

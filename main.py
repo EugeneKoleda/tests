@@ -33,3 +33,10 @@ def spices(weight):
         return 0
     return float(0.5 * weight / 1000)
 
+
+def monosaccharides(weight):
+    try:
+        weight = int(weight)
+    except ValueError:
+        return 0
+    return int(5 * weight / 1000)
