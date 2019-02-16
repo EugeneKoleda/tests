@@ -70,5 +70,21 @@ class TestMonosaccharides(unittest.TestCase):
         self.assertEqual(monosaccharides('adadda'), 0)
 
 
+class TestDays(unittest.TestCase):
+    def test_days_returns_weight(self):
+        self.assertEqual(days(1000), 2)
+        self.assertEqual(days(1500), 3)
+        self.assertEqual(days(800), 1)
+
+    def test_days_returns_integer(self):
+        self.assertIsInstance(days(1000), int)
+
+    def test_days_receives_string_return_integer(self):
+        self.assertEqual(days('1000'), 2)
+
+    def test_days_receives_alpha_string_return_integer(self):
+        self.assertEqual(days('adadda'), 0)
+
+
 if __name__ == "__main__":
     unittest.main()

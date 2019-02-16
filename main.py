@@ -40,3 +40,12 @@ def monosaccharides(weight):
     except ValueError:
         return 0
     return int(5 * weight / 1000)
+
+
+def days(weight):
+    try:
+        weight = int(weight)
+    except ValueError:
+        return 0
+    return int(2 * weight / 1000)
+
