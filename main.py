@@ -10,7 +10,9 @@ Monosaccharides: 5g
 """
 
 
-def nitrite_salt(weight):
+def return_nitrite_salt(weight):
+    """This function get weight of meat and return weight of nitrite salt"""
+
     try:
         weight = int(weight)
     except ValueError:
@@ -18,7 +20,9 @@ def nitrite_salt(weight):
     return int(10 * weight/1000)
 
 
-def salt(weight):
+def return_salt(weight):
+    """This function get weight of meat and return weight of salt"""
+
     try:
         weight = int(weight)
     except ValueError:
@@ -26,7 +30,9 @@ def salt(weight):
     return int(15 * weight / 1000)
 
 
-def spices(weight):
+def return_spices(weight):
+    """This function get weight of meat and return weight of spices"""
+
     try:
         weight = int(weight)
     except ValueError:
@@ -34,7 +40,9 @@ def spices(weight):
     return float(0.5 * weight / 1000)
 
 
-def monosaccharides(weight):
+def return_monosaccharides(weight):
+    """This function get weight of meat and return weight of monosaccharides"""
+
     try:
         weight = int(weight)
     except ValueError:
@@ -42,7 +50,9 @@ def monosaccharides(weight):
     return int(5 * weight / 1000)
 
 
-def days(weight):
+def return_days(weight):
+    """This function get weight of meat and return the amount of days until ready"""
+
     try:
         weight = int(weight)
     except ValueError:
