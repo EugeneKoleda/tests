@@ -1,9 +1,10 @@
 import unittest
 import sys
 import os
+from main import *
+
 
 sys.path.append(os.getcwd())
-from main import *
 
 
 class TestNitriteSalt(unittest.TestCase):
