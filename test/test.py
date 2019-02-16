@@ -21,5 +21,22 @@ class TestNitriteSalt(unittest.TestCase):
     def test_nitrite_salt_receives_alpha_string_return_integer(self):
         self.assertEqual(nitrite_salt('adadda'), 0)
 
+
+class TestSalt(unittest.TestCase):
+    def test_salt_returns_weight(self):
+        self.assertEqual(salt(1000), 15)
+        self.assertEqual(salt(1500), 22)
+        self.assertEqual(salt(800), 12)
+
+    def test_nitrite_salt_returns_integer(self):
+        self.assertIsInstance(salt(1000), int)
+
+    def test_nitrite_salt_receives_string_return_integer(self):
+        self.assertEqual(salt('1000'), 15)
+
+    def test_nitrite_salt_receives_alpha_string_return_integer(self):
+        self.assertEqual(salt('adadda'), 0)
+
+
 if __name__ == "__main__":
     unittest.main()

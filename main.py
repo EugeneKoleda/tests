@@ -11,9 +11,19 @@ Monosaccharides: 5g
 
 
 def nitrite_salt(weight):
-
     try:
         weight = int(weight)
     except ValueError:
         return 0
     return int(10 * weight/1000)
+
+
+def salt(weight):
+    try:
+        weight = int(weight)
+    except ValueError:
+        return 0
+    return int(15 * weight / 1000)
+
+
+
